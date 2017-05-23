@@ -1,14 +1,14 @@
-//ONE PAGE SCROLL
+//One page scroll
 $(function () {
     var sections = $('.section'),
-        display = $('main-content'),
+        display = $('.main-content'),
         inScroll = false;
 
     var scrollToSection = function (sectionEq) {
         var position = 0;
 
         if (!inScroll) {
-            inscroll = true;
+            inScroll = true;
             position = (sections.eq(sectionEq).index() * -100) + '%';
             sections.eq(sectionEq).addClass('active')
                 .siblings().removeClass('active');
@@ -39,18 +39,19 @@ $(function () {
             }
         }
 
-    });
-
-    $('down-arrow').on('click', function (e)) {
-        e.preventDefault();
-        scrollToSection(1);
-    }
-
-    if (deltaY < 0) { //scroll up
+            if (deltaY < 0) { //scroll up
         if (prevSection.length) {
             scrollToSection(prevSection.index());
         }
     }
+
+    });
+
+    $('.down-arrow').on('click', function (e) {
+        e.preventDefault();
+        scrollToSection(1);
+    })
+
 
     $('.fixed-menu__link, .nav__link, .order-link').on('click', function (e) {
         e.preventDefault();
