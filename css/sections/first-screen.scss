@@ -1,0 +1,177 @@
+.first-screen {
+  background: url('../../img/bg/first-screen-bg.png') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.first-screen .container {
+  position: static;
+}
+
+.first-screen__content:before,
+.first-screen__content:after {
+  content: "";
+  display: table;
+}
+
+.first-screen__content:after {
+  clear: both;
+}
+
+.first-screen__container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+.header {
+  padding-top: 12px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo__img {
+  height: 75px;
+}
+
+.header__logo {
+  float: left;
+  width: 32%;
+}
+
+.header__menu {
+  float: left;
+  width: 68%;
+  padding-top: 16px;
+}
+
+.nav {
+  width: 83%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.order-link {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 9px 0;
+  margin-left: 2%;
+}
+
+.nav__list {
+  width: 100%;
+}
+
+.nav__item {
+  white-space: nowrap;
+  margin-right: 15px;
+  display: block;
+  float: left;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:last-child:after {
+  display: none;
+}
+
+.nav__item:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  margin-left: 15px;
+}
+
+.nav__link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'ubuntumedium';
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.first-screen__left {
+  float: left;
+  width: 50%;
+}
+
+.first-screen__right {
+  float: left;
+  width: 50%;
+  padding-top: 115px;
+}
+
+.first-screen__desc {
+  font-size: 65px;
+  color: #fff;
+  font-family: 'lifehackmedium';
+  text-transform: lowercase;
+  line-height: 1em;
+}
+
+.first-screen__img {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.down-arrow {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -15px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.down-arrow__icon-wrapper {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.down-arrow__icon {
+  fill: #fff;
+  display: block;
+}
+
+.down-arrow:hover svg {
+  top: -15px;
+  width: 35px;
+  height: 35px;
+}
+
+.down-arrow svg {
+  width: 30px;
+  height: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: relative;
+  top: 0;
+}

@@ -1,0 +1,60 @@
+.yandex-map {
+    height: calc(100% - 60px);
+}
+
+.footer {
+    background: url('../../img/bg/footer.png') center center no-repeat;
+    height: 60px;
+    background-size: cover;
+}
+
+.footer__left {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.footer__address {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer__phone {
+    color: #e35028;
+    font-family: 'ubuntubold';
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer__right {
+    float: right;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.socials {
+     float:right;
+}
+
+.socials__item {
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.socials__text {
+    display: none;
+}
+
+.socials__icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+.socials__link:hover .socials__icon {
+  opacity: 1; 
+  }

@@ -1,0 +1,119 @@
+.reviews {
+    background: #000;
+}
+
+.reviews__list {
+    height: 100%;
+    margin-left: -40px;
+}
+
+.reviews__item {
+    float: left;
+    width: 25%;
+    height: 50%;
+    position: relative;
+}
+
+.review {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.review:hover .review__hover {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.review__photo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.review__photo-1 {
+   background-image: url('../../img/content/reviews/photo-1.jpg');  
+}
+
+.review__photo-2 {
+   background-image: url('../../img/content/reviews/photo-2.jpg');  
+}
+
+.review__photo-3 {
+   background-image: url('../../img/content/reviews/photo-3.jpg');  
+}
+
+.review__photo-4 {
+   background-image: url('../../img/content/reviews/photo-4.jpg');  
+}
+
+.review__photo-5 {
+   background-image: url('../../img/content/reviews/photo-5.jpg');  
+}
+
+.review__photo-6 {
+   background-image: url('../../img/content/reviews/photo-6.jpg');  
+}
+
+.review__photo-7 {
+   background-image: url('../../img/content/reviews/photo-7.jpg');  
+}
+
+.review__photo-8 {
+   background-image: url('../../img/content/reviews/photo-8.jpg');  
+}
+
+.review__hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    background: rgba(20, 20, 20, 0.7);
+    padding: 16% 12%;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.review__title {
+    color: #fff;
+    font-family: 'gagalinregular';
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.review__shorttext {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'ubuntulight';
+    margin-bottom: 13px;
+}
+
+.review__view {
+    border-radius: 5px;
+    background-color: #2f3234;
+    padding: 8px 12px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'ubuntumedium';
+    font-size: 12px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+
+
+
+
+
+
