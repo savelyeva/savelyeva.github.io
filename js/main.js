@@ -1,3 +1,26 @@
+//slider
+$(function () {
+
+    var burgerCarousel = $('.owl-carousel').owlCarousel({
+        items : 1,
+        loop : true
+    });
+
+    $('.burger-slider__btn_next').on('click', function(e){
+        e.preventDefault();
+        burgerCarousel.trigger('next.owl.carousel');
+
+    });
+
+        $('.burger-slider__btn_prev').on('click', function(e){
+        e.preventDefault();
+        burgerCarousel.trigger('prev.owl.carousel');
+
+    });
+
+});
+
+
 //one page scroll
 $(function () {
 
@@ -83,23 +106,3 @@ $(function () {
 
 });
 
-//slider
-$(function () {
-
-    var burgerCarousel = $('.burgers__slider').owlCarousel({
-        items : 1,
-        loop : true
-    });
-
-    $('.burger-slider__btn_next').on('click', function(e){
-        e.preventDefault();
-        burgerCarousel.trigger('next.owl.carousel');
-
-    });
-
-        $('.burger-slider__btn_prev').on('click', function(e){
-        e.preventDefault();
-        burgerCarousel.trigger('prev.owl.carousel');
-
-    });
-});
