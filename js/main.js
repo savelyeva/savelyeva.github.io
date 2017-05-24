@@ -3,6 +3,8 @@ $(function () {
 
     var burgerCarousel = $('.owl-carousel').owlCarousel({
         items : 1,
+        smartSpeed:1000, //Время движения слайда
+        autoplayTimeout:3000, //Время смены слайда
         loop : true
     });
 
