@@ -131,7 +131,7 @@ template { display: none; }
 
 html, body { width: 100%; height: 100%; }
 
-body { margin: 0; font-family: 'ubuntulight', Arial, sans-serif; font-size: 16px; line-height: 1.42; color: #2f3234; -webkit-font-smoothing: antialiased; }
+body { margin: 0; position: relative; font-family: 'ubuntulight', Arial, sans-serif; font-size: 16px; line-height: 1.42; color: #2f3234; -webkit-font-smoothing: antialiased; }
 
 .container { margin: 0 auto; width: 940px; position: relative; }
 
@@ -139,7 +139,7 @@ body { margin: 0; font-family: 'ubuntulight', Arial, sans-serif; font-size: 16px
 
 .container:after { clear: both; }
 
-.wrapper { position: relative; overflow: hidden; min-width: 960px; }
+.wrapper { position: relative; overflow: hidden; min-width: 960px; height: 100%; }
 
 .main-content { height: 100%; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: 1s; transition: 1s; }
 
@@ -326,7 +326,7 @@ footer { min-width: 960px; }
 
 .nav { width: 83%; display: inline-block; vertical-align: middle; }
 
-.order-link { width: 15%; display: inline-block; vertical-align: middle; padding: 9px 0; margin-left: 2%; }
+.order-link { width: 15%; display: inline-block; vertical-align: middle; padding: 9px 0; margin-left: 1%; }
 
 .nav__list { width: 100%; }
 
@@ -352,13 +352,11 @@ footer { min-width: 960px; }
 
 .down-arrow { display: block; position: absolute; bottom: 20px; left: 50%; width: 60px; height: 60px; margin-left: -15px; -webkit-transition: .3s; transition: .3s; }
 
-.down-arrow__icon-wrapper { display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.down-arrow__icon { display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-.down-arrow__icon { fill: #fff; display: block; }
+.down-arrow__icon-pic { width: 30px; height: 30px; -webkit-transition: .3s; transition: .3s; position: relative; top: 0; }
 
-.down-arrow:hover svg { top: -15px; width: 35px; height: 35px; }
-
-.down-arrow svg { width: 30px; height: 30px; -webkit-transition: .3s; transition: .3s; position: relative; top: 0; }
+.down-arrow:hover .down-arrow__icon-pic { top: -15px; width: 35px; height: 35px; }
 
 .fixed-menu { position: fixed; top: 90px; right: 40px; }
 
