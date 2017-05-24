@@ -58,4 +58,27 @@ $(function () {
         scrollToSection(href);
 
     });
+
+    $(document).on('keydown', function(e) {
+
+        var activeSection = sections.filter('.active'),
+            nextSection = activeSection.next(),
+            prevSection = activeSection.prev();
+
+        switch(e.keyCode) {
+            case 40: //page down
+                if (nextSection.length) {
+                    scrollToSection(nextSection.index());
+            }
+            break;
+
+            case 38: //page up
+                if (prevSection.length) {
+                    scrollToSection(prevSection.index());
+            }
+             break;   
+        }
+        
+    });
+
 });
