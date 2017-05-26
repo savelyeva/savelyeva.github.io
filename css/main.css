@@ -480,6 +480,10 @@ footer { min-width: 960px; }
 
 .team { background: url(../../img/bg/team-bg.png) center center no-repeat; background-size: cover; position: relative; }
 
+.team-acco__content:before, .team-acco__content:after { content: ""; display: table; }
+
+.team-acco__content:after { clear: both; }
+
 .team__section { position: absolute; right: 0; top: 0; bottom: 0; left: 50%; background: rgba(47, 50, 52, 0.93); padding: 5% 2% 0% 7%; }
 
 .team .section__title { margin-bottom: 12%; }
@@ -490,10 +494,28 @@ footer { min-width: 960px; }
 
 .team-acco__item { margin-bottom: 40px; }
 
+.team-acco__item.active .team-acco__trigger { color: #f9b43b; }
+
+.team-acco__item.active .team-acco__trigger:before { -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg); transform: rotate(-180deg); }
+
 .team-acco__trigger { color: #fff; font-size: 14px; font-family: 'gagalinregular'; text-decoration: none; position: relative; display: block; }
+
+.team-acco__trigger:before, .team-acco__trigger:after { content: ""; display: block; position: absolute; left: -18px; top: 8px; width: 0; height: 0; }
 
 .team-acco__trigger:before { border-top: 7px solid #f9b43b; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 0px solid transparent; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .3s; transition: .3s; }
 
-.team-acco__trigger:before, .team-acco__trigger:after { content: ""; display: block; position: absolute; left: -18px; top: 8px; width: 0; height: 0; }
+.team-acco__trigger:after { display: none; border-bottom: 7px solid #f9b43b; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 0px solid transparent; }
+
+.team-acco__content { padding-top: 14px; }
+
+.team-acco__pic { float: left; text-align: center; width: 30%; }
+
+.team-acco__img { background-image: url("../../img/content/man-photo.jpg"); display: inline-block; vertical-align: top; width: 100px; height: 100px; background-size: cover; background-position: center center; background-repeat: no-repeat; border-radius: 50%; }
+
+.team-acco__text { float: left; width: 70%; }
+
+.team-acco__title { font-family: 'ubuntubold'; font-size: 14px; color: #fff; margin-bottom: 14px; }
+
+.team-acco__text-content { font-family: 'ubuntulight'; color: #fff; font-size: 14px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -3,8 +3,7 @@ $(function () {
 
     var burgerCarousel = $('.owl-carousel').owlCarousel({
         items : 1,
-        smartSpeed:1000, //Время движения слайда
-        autoplayTimeout:3000, //Время смены слайда
+        smartSpeed:2000, //Время движения слайда
         loop : true
     });
 
@@ -107,4 +106,32 @@ $(function () {
     });
 
 });
+
+//vertical accordion
+
+$(function () {
+    $('.team-acco__trigger').on('click', function(e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            item = $this.closest('.team-acco__item'),
+            container = $this.closest('.team-acco'),
+            items = container.find('.team-acco__item'),
+            content = item.find('.team-acco__content'),
+            otherContent = container.find('team-acco__content');
+
+        if (!item.hasClass('active')) {
+            items.removeClass('active');
+            item.addClass('active');
+            otherContent.slideUp();
+            content.slideDown();    
+        } else {
+            item.removeClass('active');
+            content.slideUp();
+        }   
+
+    });
+});
+
+
 
