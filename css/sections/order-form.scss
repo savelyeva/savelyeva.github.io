@@ -31,7 +31,7 @@
 .form__label {
   margin-bottom: 17px;
   font-family: 'ubuntulight';
-  color: #fff;
+  color: $white;
   font-size: 14px;
 }
 
@@ -91,7 +91,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -122,7 +122,7 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
-  color: #fff;
+  color: $white;
   margin-left: 10px;
 }
 
@@ -150,7 +150,7 @@
   font-size: 13px;
   text-transform: uppercase;
   border-radius: 5px;
-  color: #ffffff;
+  color: $white;
   padding: 10px 15px;
   cursor: pointer;
 }

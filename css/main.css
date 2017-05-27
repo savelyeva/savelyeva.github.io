@@ -446,7 +446,7 @@ footer { min-width: 960px; }
 
 .form__radio-checkbox .form__radio-elem:checked + .form__radio-fake:after { background: url("../../img/icons/check.svg") 50% no-repeat transparent; background-size: contain; width: 11px; height: 9px; }
 
-.form__button { display: inline-block; vertical-align: middle; margin-right: 20px; border: 0; background: #e35028; font-size: 13px; text-transform: uppercase; border-radius: 5px; color: #ffffff; padding: 10px 15px; cursor: pointer; }
+.form__button { display: inline-block; vertical-align: middle; margin-right: 20px; border: 0; background: #e35028; font-size: 13px; text-transform: uppercase; border-radius: 5px; color: #fff; padding: 10px 15px; cursor: pointer; }
 
 .form__button-reset { padding-left: 0; padding-right: 0; text-transform: none; background: transparent; }
 
