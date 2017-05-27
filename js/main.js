@@ -1,28 +1,6 @@
-//slider
-$(function () {
+$(document).ready(function() {
 
-    var burgerCarousel = $('.owl-carousel').owlCarousel({
-        items : 1,
-        smartSpeed:2000, //Время движения слайда
-        loop : true
-    });
-
-    $('.burger-slider__btn_next').on('click', function(e){
-        e.preventDefault();
-        burgerCarousel.trigger('next.owl.carousel');
-
-    });
-
-        $('.burger-slider__btn_prev').on('click', function(e){
-        e.preventDefault();
-        burgerCarousel.trigger('prev.owl.carousel');
-
-    });
-
-});
-
-
-//one page scroll
+//ONE PAGE SCROLL
 $(function () {
 
     var sections = $('.section'),
@@ -107,7 +85,32 @@ $(function () {
 
 });
 
-//vertical accordion
+//SLIDER OWL CAROUSEL
+
+$(function () {
+
+    var burgerCarousel = $('.owl-carousel').owlCarousel({
+        items : 1,
+        smartSpeed:2000, //Время движения слайда
+        loop : true
+    });
+
+    $('.burger-slider__btn_next').on('click', function(e){
+        e.preventDefault();
+        burgerCarousel.trigger('next.owl.carousel');
+
+    });
+
+        $('.burger-slider__btn_prev').on('click', function(e){
+        e.preventDefault();
+        burgerCarousel.trigger('prev.owl.carousel');
+
+    });
+
+});
+
+
+//VERTICAL ACCORDION
 
 $(function () {
     $('.team-acco__trigger').on('click', function(e) {
@@ -130,7 +133,11 @@ $(function () {
             content.slideUp();
         }   
 
-    });
+     });
+
+  });
+
+
 });
 
 
