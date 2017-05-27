@@ -121,7 +121,7 @@ $(function () {
             container = $this.closest('.team-acco'),
             items = container.find('.team-acco__item'),
             content = item.find('.team-acco__content'),
-            otherContent = container.find('team-acco__content');
+            otherContent = container.find('.team-acco__content');
 
         if (!item.hasClass('active')) {
             items.removeClass('active');
