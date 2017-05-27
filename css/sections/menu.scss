@@ -2,7 +2,7 @@
     background: url(../../img/bg/menu-bg.png) center center no-repeat;
     background-size: cover;
     position: relative;
-    font-size: 0;
+    // font-size: 0;
 }
 
 .menu__title {
@@ -12,7 +12,7 @@
     position: absolute;
     top: 10%;
     left: 10%;
-    color: white;
+    color: $white;
 }
 
 .menu-list {
@@ -22,26 +22,48 @@
     bottom: 0;
 }
 
-.menu__item {
+.menu-list:before,
+.menu-list:after {
+    content: "";
+    display: table;
+}
+
+.menu-list:after {
+    clear: both;
+}
+
+.menu-list__item {
     float: left;
     height: 100%;
 }
 
-.menu__item-link {
+.menu-list__trigger {
     display: block;
     height: 100%;
     width: 80px;
     float: left;
-    /*background-size: cover;
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
     text-decoration: none;
     position: relative;
 }
 
-.menu__item-text {
+.menu-list__trigger-meats {
+    background-image: url('../../img/bg/meats-bg.png');
+}
+
+.menu-list__trigger-vegans {
+    background-image: url('../../img/bg/vegans-bg.png');
+}
+
+.menu-list__trigger-diet {
+    background-image: url('../../img/bg/diet-bg.png');
+}
+
+.menu-list__trigger-text {
     font-size: 40px;
-    color: #fff;
+    color: $white;
     font-family: 'gagalinregular';
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
@@ -55,23 +77,19 @@
     margin-top: -40px;
 }
 
- .menu__item-meats {
-     background-image: url('../../img/bg/meats-bg.png');
-     background-size: cover;
-     background-repeat: no-repeat;
- }
+.menu-list__content {
+    height: 100%;
+    float: left;
+    background: rgba(47, 50, 52, 0.93);
+    width: 0;
+    overflow: hidden;
+}
 
- .menu__item-vegans {
-     background-image: url('../../img/bg/vegans-bg.png');
-     background-size: cover;
-     background-repeat: no-repeat;
- }
-
- .menu__item-diet {
-     background-image: url('../../img/bg/diet-bg.png');
-     background-size: cover;
-     background-repeat: no-repeat;
-   }
-
-
-
+.menu-list__content-text {
+    font-family: 'ubuntulight';
+    font-size: 14px;
+    color: $white;
+    padding: 60px 30px;
+    width: 550px;
+    line-height: 1.8;
+}
