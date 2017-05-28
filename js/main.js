@@ -186,14 +186,48 @@ $(document).ready(function () {
 
     });
 
-    //INPUT MASK
-    $(function() {
-        $('.phone-mask').inputmask('+7 (999) 999 99 99');
+
+    // // FANCYBOX
+
+    // $(function () {
+    //     $('.review__view').fancybox({
+    //         type: 'inline',
+    //         maxWidth: 460,
+    //         fitToView: false,
+    //         padding: 0
+    //     });
+
+    //     $('.full-review__close').on('click', function (e) {
+    //         e.preventDefault();
+    //         $.fancybox.close();
+    //     });
+    // });
+
+
+    //bPopup
+
+    $(function () {
+        $('.my-button').on('click', function (e) {
+            // e.preventDefault();
+            $('#element_to_pop_up').bPopup({
+                modalColor: '#2f3234',
+                opacity: 0.92
+            });
+
+            $('.full-review__close').on('click', function (e) {
+                e.preventDefault();
+                $.bPopup.close();
+            });
+
+        });
+
     });
 
 
+    //INPUT MASK
+
+    $(function () {
+        $('.phone-mask').inputmask('+7 (999) 999 99 99');
+    });
 
 });
-
-
-
