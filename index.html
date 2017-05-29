@@ -925,7 +925,7 @@
 
             <!--SECTION CONTACTS-->
             <section class="section contacts">
-                <div class="yandex-map"></div>
+                <div class="yandex-map" id="map"></div>
                 <footer class="footer">
                     <div class="container">
                         <div class="footer__left">
@@ -994,7 +994,9 @@
         </li>
     </ul>
 
-    <!--всплывашки-->
+    <!--ВСПЛЫВАШКИ-->
+
+    <!--Popup REVIEWS Подробнее-->
         <div class="full-review" id="element_to_pop_up">
         <a href="#" class="full-review__close b-close">
             <img src="img/icons/close.svg" alt="close">
@@ -1010,15 +1012,27 @@
         </div>
     </div>
 
-    <div class="status-popup popup" id="success"></div>
-    <div class="status-popup popup" id="error"></div>
+   <!--Popup Submit--> 
+    <div class="status-popup popup" id="success">
+        <div class="status-popup__inner">
+            <div class="status-popup__message">Сообщение отправлено</div>
+            <a class="status-popup__close btn" href="#">Закрыть</a>
+        </div>
+    </div>
+    <div class="status-popup popup" id="error">
+                <div class="status-popup__inner">
+            <div class="status-popup__message error-message">Произошла ошибка</div>
+            <a class="status-popup__close btn" href="#">Закрыть</a>
+        </div>
+    </div>
 
     <!--scripts-->
     <script src="js/libs/jquery-3.2.1.min.js"></script>
     <script src="js/libs/owlcarousel/owl.carousel.min.js"></script>
-    <!--<script src="js/libs/fancybox-3.0/jquery.fancybox.min.js"></script>-->
+    <script src="js/libs/fancybox-3.0/jquery.fancybox.min.js"></script>
     <script src="js/libs/inputmask/jquery.inputmask.bundle.min.js"></script>
     <script src="js/libs/jquery.bpopup.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
 </body>
 

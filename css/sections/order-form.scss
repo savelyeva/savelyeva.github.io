@@ -161,3 +161,25 @@
   text-transform: none;
   background: transparent;
 }
+
+.popup {
+  display: none;
+}
+
+.status-popup__inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.status-popup__message {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-popup {
+  width: 240px;
+}
+
+.error-message {
+  color: #e35028;
+}
