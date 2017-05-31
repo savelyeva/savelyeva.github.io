@@ -7,3 +7,4 @@ $result = mail('savelyeva1984@gmail.com', 'Тема письма', $message);
 echo json_encode(array(
     'status'=> $result
  ));
+?>

@@ -40,7 +40,7 @@
 }
 
 .burger-slider__btn_prev {
-  left: -42px;
+  left: -45px;
 }
 
 .burger-slider__btn_prev {
@@ -52,7 +52,7 @@
   fill: $white;
   display: block;
   height: 30px;
-  width: 35px;
+  width: 30px;
   transition: .3s;
 }
 
@@ -80,6 +80,8 @@
 .burgers-slider__pic {
   display: inline-block;
   max-width: 100%;
+  width:470px;
+  height:306px;
 }
 
 .burgers-slider__right {
