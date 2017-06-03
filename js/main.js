@@ -223,7 +223,7 @@ $(document).ready(function () {
                 formData = form.serialize();
 
             $.ajax({
-                url: '../mail.php',
+                url: '/mail.php',
                 type: 'POST',
                 data: formData,
                 success: function (data) {
