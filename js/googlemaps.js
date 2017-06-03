@@ -64,14 +64,6 @@ function setMarkers(map) {
         // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
         marker.addListener('click', function () {
             infowindow.open(map, marker);
-
-            google.maps.event.addListener(infowindow, 'closeclick', function () {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            });
-
-            marker.addListener('click', function () {
-                marker.setAnimation(null);
-            });
         });
 
     }
