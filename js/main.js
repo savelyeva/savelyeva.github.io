@@ -233,7 +233,7 @@ $(document).ready(function () {
 
     // FORM SUBMIT
     $(function () {
-        $('#order-form').on('submit', function (e) {
+        $('#order-form').on('submit', function(e) {
             e.preventDefault();
 
             var form = $(this),
@@ -268,56 +268,44 @@ $(document).ready(function () {
         });
     });
 
-    // // GOOGLE Map
-    // function initMap() {
-    //     var uluru = { lat: -25.363, lng: 131.044 };
-    //     var map = new google.maps.Map(document.getElementById('map'), {
-    //         zoom: 4,
-    //         center: uluru
-    //     });
-    //     var marker = new google.maps.Marker({
-    //         position: uluru,
-    //         map: map
-    //     });
-    // }
 
     // Yandex Map
-    $(function () {
-        ymaps.ready(init);
-        var myMap;
+    // $(function () {
+    //     ymaps.ready(init);
+    //     var myMap;
 
-        function init() {
-            myMap = new ymaps.Map("map", {
-                center: [59.93909492874885, 30.315868104999875],
-                zoom: 11,
-                controls: []
-            });
+    //     function init() {
+    //         myMap = new ymaps.Map("map", {
+    //             center: [59.93909492874885, 30.315868104999875],
+    //             zoom: 11,
+    //             controls: []
+    //         });
 
-            var coords = [
-                [59.94554327989287, 30.38935262114668],
-                [59.91142323563909, 30.50024587065841],
-                [59.88693161784606, 30.3196581021103713],
-                [59.970335748221672, 30.315194906302924],
-            ],
+    //         var coords = [
+    //             [59.94554327989287, 30.38935262114668],
+    //             [59.91142323563909, 30.50024587065841],
+    //             [59.88693161784606, 30.3196581021103713],
+    //             [59.970335748221672, 30.315194906302924],
+    //         ],
 
-                myCollection = new ymaps.GeoObjectCollection({}, {
-                    iconLayout: 'default#image',
-                    iconImageHref: '../img/icons/map-marker.svg',
-                    iconImageSize: [46, 57],
-                    iconImageOffset: [-26, -52],
-                    draggable: false // метки перемещать нельзя
-                });
+    //             myCollection = new ymaps.GeoObjectCollection({}, {
+    //                 iconLayout: 'default#image',
+    //                 iconImageHref: '../img/icons/map-marker.svg',
+    //                 iconImageSize: [46, 57],
+    //                 iconImageOffset: [-26, -52],
+    //                 draggable: false // метки перемещать нельзя
+    //             });
 
-            for (var i = 0; i < coords.length; i++) {
-                myCollection.add(new ymaps.Placemark(coords[i]));
-            }
+    //         for (var i = 0; i < coords.length; i++) {
+    //             myCollection.add(new ymaps.Placemark(coords[i]));
+    //         }
 
-            myMap.geoObjects.add(myCollection);
-            // Отключаем перетаскивание карты мышью.
-            myMap.behaviors.disable('scrollZoom');
-        }
+    //         myMap.geoObjects.add(myCollection);
+    //         // Отключаем перетаскивание карты мышью.
+    //         myMap.behaviors.disable('scrollZoom');
+    //     }
 
-    });
+    // });
 
 
 });

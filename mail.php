@@ -1,4 +1,5 @@
 <?php
+
 $name = $_POST['name'];
 $message = "Сообщение от пользователя: $name";
 
@@ -8,3 +9,4 @@ echo json_encode(array(
     'status'=> $result
  ));
 ?>
+
