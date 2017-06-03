@@ -1,174 +1,79 @@
-var neighborhoods = [
-    { lat: 59.911, lng: 30.500 },
-    { lat: 59.886, lng: 30.319 },
-    { lat: 59.970, lng: 30.315 }
-];
-
-var marker;
-var markers = [];
-var map;
-
 function initMap() {
-    var uluru = { lat: 59.896, lng: 30.424 };
-    map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: uluru,
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {
+            lat: 59.896,
+            lng: 30.424
+        },
         mapTypeId: 'roadmap',
         draggable: false,
         mapTypeControl: false,
         scrollwheel: false
     });
 
-    marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-        title: 'ул.Бабушкина, д.12/1, 15',
-        // draggable: true,
-        animation: google.maps.Animation.DROP,
-        position: { lat: 59.898, lng: 30.421 }
+    setMarkers(map);
+}
+
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+var cafes = [
+    [' ул.Бабушкина, д.12/1, 15', 59.900, 30.489, 4],
+    [' пр.Московский, д.74', 59.886, 30.319, 3],
+    [' ул.Дыбенко, д.7', 59.911, 30.500, 2],
+    [' пр.Большевиков, д.105', 59.896, 30.424, 1]
+];
+
+function setMarkers(map) {
+    // Adds markers to the map.
+    var image = {
+        url: '../img/icons/map-marker.svg'
+    };
+
+    // Создаем наполнение для информационного окна
+    var contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Mr. Burger</h1>' +
+        '<div id="bodyContent">' +
+        '<p>Мы приглашаем Вас посетить кафе "Mr Burger", чудное место, где царит позитив, и хорошее настроение и ожидают самые вкусные бургеры в мире! Заходите!</p>' +
+        '<br>' +
+        '<p><b>Веб-сайт:</b> <a href="http://burger.tacoder.com/" target="_blank">burger.tacoder.com/</a>' +
+        '</p>' +
+        '</div>' +
+        '</div>';
+
+    // Создаем информационное окно
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
     });
-    // либо вместо map:map; 
-    // To add the marker to the map, call setMap();
-    // marker.setMap(map);
-    marker.setIcon('../img/icons/map-marker.svg');
-    marker.addListener('click', toggleBounce);
 
-}
+    for (var i = 0; i < cafes.length; i++) {
+        var cafe = cafes[i];
+        var marker = new google.maps.Marker({
+            position: {
+                lat: cafe[1],
+                lng: cafe[2]
+            },
+            map: map,
+            icon: image,
+            title: cafe[0],
+            zIndex: cafe[3]
+        });
 
-function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-    } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
+        // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+
+            google.maps.event.addListener(infowindow, 'closeclick', function () {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            });
+
+            marker.addListener('click', function () {
+                marker.setAnimation(null);
+            });
+        });
+
     }
+
 }
-
-function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-    } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-}
-
-
-
-// var marker1;
-// var marker2;
-// var marker3;
-// var marker4;
-// var map;
-
-// function initMap() {
-//     var uluru = { lat: 59.896, lng: 30.424 };
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         zoom: 15,
-//         center: uluru,
-//         mapTypeId: 'roadmap',
-//         draggable: false,
-//         mapTypeControl: false,
-//         scrollwheel: false
-//     });
-
-//     marker1 = new google.maps.Marker({
-//         position: uluru,
-//         map: map,
-//         title: 'ул.Бабушкина, д.12/1, 15',
-//         draggable: true,
-//         animation: google.maps.Animation.DROP,
-//         position: { lat: 59.898, lng: 30.421 }
-//     });
-//     // либо вместо map:map; 
-//     // To add the marker to the map, call setMap();
-//     // marker.setMap(map);
-//     marker1.setIcon('../img/icons/map-marker.svg');
-//     marker1.addListener('click', toggleBounce);
-
-//         marker2 = new google.maps.Marker({
-//         position: uluru,
-//         map: map,
-//         title: 'ул.Бехтерева, д.74',
-//         draggable: true,
-//         animation: google.maps.Animation.DROP,
-//         position: { lat: 59.911, lng: 30.500 }
-//     });
-
-//      marker2.setIcon('../img/icons/map-marker.svg');
-
-//         marker3 = new google.maps.Marker({
-//         position: uluru,
-//         map: map,
-//         title: 'Уездный проспект, д.24',
-//         draggable: true,
-//         animation: google.maps.Animation.DROP,
-//         position: { lat: 59.886, lng: 30.319 }
-//     });
-
-//      marker3.setIcon('../img/icons/map-marker.svg');
-
-//         marker4 = new google.maps.Marker({
-//         position: uluru,
-//         map: map,
-//         title: 'ул.Крупской, д.4',
-//         draggable: true,
-//         animation: google.maps.Animation.DROP,
-//         position: { lat: 59.970, lng: 30.315 }
-//     });
-
-//      marker4.setIcon('../img/icons/map-marker.svg');}
-
-
-
-
-
-
-
-
-
-
-
-
-//   function addMarker(feature) {
-//     var marker = new google.maps.Marker({
-//       position: feature.position,
-//       map: map
-//     });
-//   }
-
-//    var features = [
-//     {position: new google.maps.LatLng(59.911, 30.500)}, 
-//     {position: new google.maps.LatLng(59.886, 30.319)}, 
-//     {position: new google.maps.LatLng(59.970, 30.315)}
-//   ];
-
-//    for (var i = 0, feature; feature = features[i]; i++) {
-//     addMarker(feature);
-//   }
-
-
-// DROP MARKERS
-// function drop() {
-//     clearMarkers();
-//     for (var i = 0; i < neighborhoods.length; i++) {
-//         addMarkerWithTimeout(neighborhoods[i], i * 400);
-//     }
-// }
-
-// function addMarkerWithTimeout(position, timeout) {
-//     window.setTimeout(function () {
-//         markers.push(new google.maps.Marker({
-//             position: position,
-//             map: map,
-//             animation: google.maps.Animation.DROP
-//         }));
-//     }, timeout);
-// }
-
-// function clearMarkers() {
-//     for (var i = 0; i < markers.length; i++) {
-//         markers[i].setMap(null);
-//     }
-//     markers = [];
-// }
-
-  
