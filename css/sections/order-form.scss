@@ -162,7 +162,14 @@
   background: transparent;
 }
 
+.status-popup {
+  width: 240px;
+  padding: 10px;
+}
+
 .popup {
+  background: #f9f9f9;
+  border-radius: 4px;
   display: none;
 }
 
@@ -174,12 +181,11 @@
 .status-popup__message {
   margin-bottom: 20px;
   font-size: 14px;
-}
-
-.status-popup {
-  width: 240px;
+  font-family: 'ubuntulight';
+  color: $black;
 }
 
 .error-message {
   color: #e35028;
 }
+
